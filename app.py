@@ -7,8 +7,6 @@ app = Flask(__name__)
 
 CORS(app)
 
-
-
 import requests
 import openai as gpt4
 import random as chatgpt
