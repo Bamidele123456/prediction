@@ -11,7 +11,7 @@ import requests
 import openai as gpt4
 import random as chatgpt
 from pymongo import MongoClient
-db_url = "mongodb+srv://bamidele:1631324de@mycluster.vffurcu.mongodb.net/?retryWrites=true&w=majority"
+db_url = ""
 
 db_name = "prompts"
 
@@ -20,9 +20,9 @@ db = conn.get_database(db_name)
 # is_subscriber, variables, owner_id
 Outcomes = db.get_collection("outcomes")
 
-ODDS_API_KEY = 'ee7e0d02a378c96a51fd63084cd240c0'
-AUTO_GPT_API_KEY = 'sk-4ymsKSEYVyC41CKJqfyGT3BIbkFJMdeMP9QC3dPpwKQ2yNjB'
-GPT_4_API_KEY = 'sk-4ymsKSEYVyC41CKJqfyGT3BIbkFJMdeMP9QC3dPpwKQ2yNjB'
+ODDS_API_KEY = ''
+AUTO_GPT_API_KEY = ''
+GPT_4_API_KEY = ''
 
 
 class autogpt:
@@ -100,7 +100,7 @@ class autogpt:
 def fetch_odds_data(sport):
     url = f'https://api.the-odds-api.com/v4/sports/{sport}/odds'
     params = {
-    'apiKey': "ee7e0d02a378c96a51fd63084cd240c0",
+    'apiKey': "",
     'regions': 'us,uk,eu,au',
     'oddsFormat': 'decimal'
     }
